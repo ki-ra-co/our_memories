@@ -12,14 +12,14 @@
       <section class='review-main'>
         <h2 class='h2'>思い出タイトル</h2>
         <p class='h2 mb20'>{{ $review->title }}</p>
-        <h2 class='h2'>思い出本文</h2>
+        <h2 class='h2'>思い出日記</h2>
         <p>{{ $review->body }}</p>
       </section>  
       <aside class='review-image'>
 @if(!empty($review->image))
         <img class='book-image' src="{{ asset('storage/images/'.$review->image) }}">
 @else
-        <img class='book-image' src="{{ asset('images/dummy.png') }}">
+        <div class='image-wrapper'><img class='book-image' src="{{ asset('images/noimage.png') }}"></div>
 @endif
       </aside>
     </div>
